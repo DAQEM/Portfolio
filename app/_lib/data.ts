@@ -25,7 +25,7 @@ export const projects: Project[] = [
         description:
             "Netmon is a network monitoring tool that I created. It allows you to monitor your network traffic in real-time. It also allows you to analyze your network traffic.",
         logo: "/images/projects/netmon.png",
-        images: ["/images/projects/netmon.jpg"],
+        images: ["/images/projects/netmon.png"],
         link: "https://netmon.daqem.com",
         tags: [
             CSharp,
@@ -43,7 +43,7 @@ export const projects: Project[] = [
         description:
             "Cloud AI Scanner is a cloud-based AI-powered malware scanner that I created. It allows you to scan your files for malware using AI.",
         logo: "/images/projects/cais.png",
-        images: ["/images/projects/cloud-ai-scanner.jpg"],
+        images: ["/images/projects/cais.png"],
         tags: [CSharp, ASPNET, TypeScript, SvelteKit, Group, Microservices],
         source: "https://github.com/DAQEM/CloudAIScanner",
     },
@@ -53,7 +53,7 @@ export const projects: Project[] = [
         description:
             "DeskMate is a virtual assistant that I created. It allows you to automate your daily tasks using AI.",
         logo: "/images/projects/deskmate.png",
-        images: ["/images/projects/deskmate.jpg"],
+        images: ["/images/projects/deskmate.png"],
         tags: [CSharp, ASPNET, Group],
         source: "https://github.com/DAQEM/DeskMate",
     },
@@ -63,7 +63,7 @@ export const projects: Project[] = [
         description:
             "RecipeFinder is a recipe search engine that I created. It allows you to search for recipes based on ingredients.",
         logo: "/images/projects/recipe-finder.svg",
-        images: ["/images/projects/recipefinder.jpg"],
+        images: ["/images/projects/recipe-finder.svg"],
         tags: [CSharp, ASPNET, Individual],
         source: "https://github.com/DAQEM/RecipeFinder",
     },
@@ -73,7 +73,7 @@ export const projects: Project[] = [
         description:
             "Smart Medicine is a smart medicine reminder that I created. It allows you to set reminders for your medicine.",
         logo: "/images/projects/smart-medicine.png",
-        images: ["/images/projects/smart-medicine.jpg"],
+        images: ["/images/projects/smart-medicine.png"],
         tags: [CSharp, ASPNET, TypeScript, React, NextJS, Group, Microservices],
     },
     {
@@ -82,7 +82,7 @@ export const projects: Project[] = [
         description:
             "Pictrify is a picture sharing platform that I created. It allows you to share your pictures with others.",
         logo: "/images/projects/pictrify.png",
-        images: ["/images/projects/pictrify.jpg"],
+        images: ["/images/projects/pictrify.png"],
         tags: [
             CSharp,
             PHP,
@@ -100,7 +100,7 @@ export const projects: Project[] = [
         description:
             "Arc Lib is a library management system that I created. It allows you to manage your library.",
         logo: "/images/projects/arc-lib.png",
-        images: ["/images/projects/arc-lib.jpg"],
+        images: ["/images/projects/arc-lib.png"],
         tags: [Minecraft, Java, LibraryMods],
         link: "https://www.curseforge.com/minecraft/mc-mods/arc",
         source: "https://github.com/DAQEM/ArcLib",
@@ -111,10 +111,7 @@ export const projects: Project[] = [
         description:
             "Item Restrictions is a Minecraft mod that I created. It allows you to restrict items in Minecraft.",
         logo: "/images/projects/item-restrictions.png",
-        images: [
-            "/images/projects/item-restrictions.png",
-            "/images/projects/arc-lib.png",
-        ],
+        images: ["/images/projects/item-restrictions.png"],
         tags: [Minecraft, Java, LibraryMods],
         link: "https://www.curseforge.com/minecraft/mc-mods/item-restrictions",
         source: "https://github.com/DAQEM/ItemRestrictions",
@@ -125,7 +122,7 @@ export const projects: Project[] = [
         description:
             "Jobs+ is a Minecraft mod that I created. It allows you to create jobs in Minecraft.",
         logo: "/images/projects/jobsplus.png",
-        images: ["/images/projects/jobsplus.jpg"],
+        images: ["/images/projects/jobsplus.png"],
         tags: [Minecraft, Java, ContentMods],
         link: "https://www.curseforge.com/minecraft/mc-mods/jobs-remastered",
         source: "https://github.com/DAQEM/JobsPlusRemastered",
@@ -136,7 +133,7 @@ export const projects: Project[] = [
         description:
             "Jobs+ Tools is a Minecraft mod that I created. It allows you to create tools for Jobs+.",
         logo: "/images/projects/jobsplus-tools.png",
-        images: ["/images/projects/jobsplus-tools.jpg"],
+        images: ["/images/projects/jobsplus-tools.png"],
         tags: [Minecraft, Java, ContentMods],
         link: "https://www.curseforge.com/minecraft/mc-mods/jobsplustools",
         source: "https://github.com/DAQEM/JobsPlusTools",
@@ -147,7 +144,7 @@ export const projects: Project[] = [
         description:
             "UI Lib is a Minecraft mod that I created. It allows you to create UIs in Minecraft.",
         logo: "/images/projects/ui-lib.png",
-        images: ["/images/projects/ui-lib.jpg"],
+        images: ["/images/projects/ui-lib.png"],
         tags: [Minecraft, Java, LibraryMods],
         link: "https://www.curseforge.com/minecraft/mc-mods/ui",
         source: "https://github.com/DAQEM/UILib",
@@ -158,7 +155,7 @@ export const projects: Project[] = [
         description:
             "X-Life is a Minecraft mod that I created. It allows you to create a life system in Minecraft.",
         logo: "/images/projects/x-life.png",
-        images: ["/images/projects/x-life.jpg"],
+        images: ["/images/projects/x-life.png"],
         tags: [Minecraft, Java, ContentMods],
         link: "https://www.curseforge.com/minecraft/mc-mods/x-life-health-mod",
         source: "https://github.com/DAQEM/XLifeMod",
@@ -169,7 +166,7 @@ export const projects: Project[] = [
         description:
             "Afterlife is a Minecraft mod that I created. It allows you to create an afterlife system in Minecraft.",
         logo: "/images/projects/afterlife.png",
-        images: ["/images/projects/afterlife.jpg"],
+        images: ["/images/projects/afterlife.png"],
         tags: [Minecraft, Java, ContentMods],
         link: "https://www.curseforge.com/minecraft/mc-mods/afterlife",
     },
@@ -179,7 +176,7 @@ export const projects: Project[] = [
         description:
             "GriefLogger is a Minecraft mod that I created. It allows you to log griefing in Minecraft.",
         logo: "/images/projects/grieflogger.png",
-        images: ["/images/projects/grieflogger.jpg"],
+        images: ["/images/projects/grieflogger.png"],
         tags: [Minecraft, Java, UtilityMods],
         link: "https://www.curseforge.com/minecraft/mc-mods/grieflogger",
         source: "https://github.com/DAQEM/GriefLogger",
@@ -190,7 +187,7 @@ export const projects: Project[] = [
         description:
             "This website is a portfolio website that I created. It allows you to view my projects and get in touch with me.",
         logo: "/images/projects/portfolio.png",
-        images: ["/images/projects/portfolio.jpg"],
+        images: ["/images/projects/portfolio.png"],
         tags: [TypeScript, React, NextJS],
         source: "https://github.com/DAQEM/Portfolio",
     },
@@ -200,7 +197,7 @@ export const projects: Project[] = [
         description:
             "DAQEM.com is a website that I created. It allows you to view my projects and get in touch with me.",
         logo: "/images/projects/daqem-com.png",
-        images: ["/images/projects/daqem-com.jpg"],
+        images: ["/images/projects/daqem-com.png"],
         tags: [TypeScript, SvelteKit, BrandingSites],
         link: "https://daqem.com",
     },
