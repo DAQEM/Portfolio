@@ -1,0 +1,217 @@
+import {
+    ASPNET,
+    BrandingSites,
+    CSharp,
+    ContentMods,
+    DiscordBots,
+    Group,
+    Individual,
+    Java,
+    LibraryMods,
+    Microservices,
+    Minecraft,
+    NextJS,
+    PHP,
+    React,
+    SvelteKit,
+    TypeScript,
+    UtilityMods,
+} from "./constants";
+
+export const projects: Project[] = [
+    {
+        title: "Netmon",
+        slug: "netmon",
+        description:
+            "Netmon is a network monitoring tool that I created. It allows you to monitor your network traffic in real-time. It also allows you to analyze your network traffic.",
+        logo: "/images/projects/netmon.png",
+        images: ["/images/projects/netmon.jpg"],
+        link: "https://netmon.daqem.com",
+        tags: [
+            CSharp,
+            ASPNET,
+            TypeScript,
+            SvelteKit,
+            Individual,
+            Microservices,
+        ],
+        source: "https://github.com/DAQEM/Netmon",
+    },
+    {
+        title: "Cloud AI Scanner",
+        slug: "cloud-ai-scanner",
+        description:
+            "Cloud AI Scanner is a cloud-based AI-powered malware scanner that I created. It allows you to scan your files for malware using AI.",
+        logo: "/images/projects/cais.png",
+        images: ["/images/projects/cloud-ai-scanner.jpg"],
+        tags: [CSharp, ASPNET, TypeScript, SvelteKit, Group, Microservices],
+        source: "https://github.com/DAQEM/CloudAIScanner",
+    },
+    {
+        title: "DeskMate",
+        slug: "deskmate",
+        description:
+            "DeskMate is a virtual assistant that I created. It allows you to automate your daily tasks using AI.",
+        logo: "/images/projects/deskmate.png",
+        images: ["/images/projects/deskmate.jpg"],
+        tags: [CSharp, ASPNET, Group],
+        source: "https://github.com/DAQEM/DeskMate",
+    },
+    {
+        title: "RecipeFinder",
+        slug: "recipefinder",
+        description:
+            "RecipeFinder is a recipe search engine that I created. It allows you to search for recipes based on ingredients.",
+        logo: "/images/projects/recipe-finder.svg",
+        images: ["/images/projects/recipefinder.jpg"],
+        tags: [CSharp, ASPNET, Individual],
+        source: "https://github.com/DAQEM/RecipeFinder",
+    },
+    {
+        title: "Smart Medicine",
+        slug: "smart-medicine",
+        description:
+            "Smart Medicine is a smart medicine reminder that I created. It allows you to set reminders for your medicine.",
+        logo: "/images/projects/smart-medicine.png",
+        images: ["/images/projects/smart-medicine.jpg"],
+        tags: [CSharp, ASPNET, TypeScript, React, NextJS, Group, Microservices],
+    },
+    {
+        title: "Pictrify",
+        slug: "pictrify",
+        description:
+            "Pictrify is a picture sharing platform that I created. It allows you to share your pictures with others.",
+        logo: "/images/projects/pictrify.png",
+        images: ["/images/projects/pictrify.jpg"],
+        tags: [
+            CSharp,
+            PHP,
+            TypeScript,
+            ASPNET,
+            SvelteKit,
+            Individual,
+            Microservices,
+        ],
+        source: "https://github.com/DAQEM/Pictrify",
+    },
+    {
+        title: "Arc Lib",
+        slug: "arc-lib",
+        description:
+            "Arc Lib is a library management system that I created. It allows you to manage your library.",
+        logo: "/images/projects/arc-lib.png",
+        images: ["/images/projects/arc-lib.jpg"],
+        tags: [Minecraft, Java, LibraryMods],
+        link: "https://www.curseforge.com/minecraft/mc-mods/arc",
+        source: "https://github.com/DAQEM/ArcLib",
+    },
+    {
+        title: "Item Restrictions",
+        slug: "item-restrictions",
+        description:
+            "Item Restrictions is a Minecraft mod that I created. It allows you to restrict items in Minecraft.",
+        logo: "/images/projects/item-restrictions.png",
+        images: [
+            "/images/projects/item-restrictions.png",
+            "/images/projects/arc-lib.png",
+        ],
+        tags: [Minecraft, Java, LibraryMods],
+        link: "https://www.curseforge.com/minecraft/mc-mods/item-restrictions",
+        source: "https://github.com/DAQEM/ItemRestrictions",
+    },
+    {
+        title: "Jobs+",
+        slug: "jobsplus",
+        description:
+            "Jobs+ is a Minecraft mod that I created. It allows you to create jobs in Minecraft.",
+        logo: "/images/projects/jobsplus.png",
+        images: ["/images/projects/jobsplus.jpg"],
+        tags: [Minecraft, Java, ContentMods],
+        link: "https://www.curseforge.com/minecraft/mc-mods/jobs-remastered",
+        source: "https://github.com/DAQEM/JobsPlusRemastered",
+    },
+    {
+        title: "Jobs+ Tools",
+        slug: "jobsplus-tools",
+        description:
+            "Jobs+ Tools is a Minecraft mod that I created. It allows you to create tools for Jobs+.",
+        logo: "/images/projects/jobsplus-tools.png",
+        images: ["/images/projects/jobsplus-tools.jpg"],
+        tags: [Minecraft, Java, ContentMods],
+        link: "https://www.curseforge.com/minecraft/mc-mods/jobsplustools",
+        source: "https://github.com/DAQEM/JobsPlusTools",
+    },
+    {
+        title: "UI Lib",
+        slug: "ui-lib",
+        description:
+            "UI Lib is a Minecraft mod that I created. It allows you to create UIs in Minecraft.",
+        logo: "/images/projects/ui-lib.png",
+        images: ["/images/projects/ui-lib.jpg"],
+        tags: [Minecraft, Java, LibraryMods],
+        link: "https://www.curseforge.com/minecraft/mc-mods/ui",
+        source: "https://github.com/DAQEM/UILib",
+    },
+    {
+        title: "X-Life",
+        slug: "x-life",
+        description:
+            "X-Life is a Minecraft mod that I created. It allows you to create a life system in Minecraft.",
+        logo: "/images/projects/x-life.png",
+        images: ["/images/projects/x-life.jpg"],
+        tags: [Minecraft, Java, ContentMods],
+        link: "https://www.curseforge.com/minecraft/mc-mods/x-life-health-mod",
+        source: "https://github.com/DAQEM/XLifeMod",
+    },
+    {
+        title: "Afterlife",
+        slug: "afterlife",
+        description:
+            "Afterlife is a Minecraft mod that I created. It allows you to create an afterlife system in Minecraft.",
+        logo: "/images/projects/afterlife.png",
+        images: ["/images/projects/afterlife.jpg"],
+        tags: [Minecraft, Java, ContentMods],
+        link: "https://www.curseforge.com/minecraft/mc-mods/afterlife",
+    },
+    {
+        title: "GriefLogger",
+        slug: "grieflogger",
+        description:
+            "GriefLogger is a Minecraft mod that I created. It allows you to log griefing in Minecraft.",
+        logo: "/images/projects/grieflogger.png",
+        images: ["/images/projects/grieflogger.jpg"],
+        tags: [Minecraft, Java, UtilityMods],
+        link: "https://www.curseforge.com/minecraft/mc-mods/grieflogger",
+        source: "https://github.com/DAQEM/GriefLogger",
+    },
+    {
+        title: "This Website",
+        slug: "portfolio",
+        description:
+            "This website is a portfolio website that I created. It allows you to view my projects and get in touch with me.",
+        logo: "/images/projects/portfolio.png",
+        images: ["/images/projects/portfolio.jpg"],
+        tags: [TypeScript, React, NextJS],
+        source: "https://github.com/DAQEM/Portfolio",
+    },
+    {
+        title: "DAQEM.com",
+        slug: "daqem-com",
+        description:
+            "DAQEM.com is a website that I created. It allows you to view my projects and get in touch with me.",
+        logo: "/images/projects/daqem-com.png",
+        images: ["/images/projects/daqem-com.jpg"],
+        tags: [TypeScript, SvelteKit, BrandingSites],
+        link: "https://daqem.com",
+    },
+    {
+        title: "LittleField Bot",
+        slug: "littlefield-bot",
+        description:
+            "LittleField Bot is a Discord bot that I created. It allows you to play LittleField in Discord.",
+        logo: "/images/projects/littlefield-bot.jpg",
+        images: ["/images/projects/littlefield-bot.jpg"],
+        tags: [DiscordBots],
+        source: "https://github.com/DAQEM/LittleFieldDiscordBot",
+    },
+];
