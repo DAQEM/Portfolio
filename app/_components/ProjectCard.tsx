@@ -10,25 +10,32 @@ const ProjectCard = (props: { project: Project; tags: string[] }) => {
             : undefined;
 
     return (
-        <a
-            href={`/projects/${props.project.slug}${
-                tagsSearchParam ? "?" + tagsSearchParam : ""
-            }`}
-            className="grid grid-cols-[96px,1fr] p-4 bg-base-100 rounded-xl gap-8 border-opacity-35"
-        >
+        <div className="grid grid-cols-[96px,1fr] p-4 bg-base-100 rounded-xl gap-8 border-opacity-35">
             <div className="flex justify-center items-center w-24 h-24 rounded-2xl overflow-hidden">
-                <Image
-                    className=""
-                    src={props.project.logo}
-                    alt={props.project.title}
-                    width={96}
-                    height={96}
-                />
+                <a
+                    href={`/projects/${props.project.slug}${
+                        tagsSearchParam ? "?" + tagsSearchParam : ""
+                    }`}
+                >
+                    <Image
+                        className=""
+                        src={props.project.logo}
+                        alt={props.project.title}
+                        width={96}
+                        height={96}
+                    />
+                </a>
             </div>
             <div className="grid gap-2">
                 <div className="flex justify-between">
-                    <h2 className="text-xl font-semibold">
-                        {props.project.title}
+                    <h2 className="text-xl font-semibold link link-hover">
+                        <a
+                            href={`/projects/${props.project.slug}${
+                                tagsSearchParam ? "?" + tagsSearchParam : ""
+                            }`}
+                        >
+                            {props.project.title}
+                        </a>
                     </h2>
                     <div className="flex gap-2">
                         {props.project.source && (
@@ -58,7 +65,7 @@ const ProjectCard = (props: { project: Project; tags: string[] }) => {
                     ))}
                 </div>
             </div>
-        </a>
+        </div>
     );
 };
 
