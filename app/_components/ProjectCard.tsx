@@ -27,7 +27,7 @@ const ProjectCard = (props: { project: Project; tags: string[] }) => {
                 </a>
             </div>
             <div className="grid gap-2">
-                <div className="flex justify-between">
+                <div className="grid lg:grid-cols-2 justify-between">
                     <h2 className="text-xl font-semibold link link-hover">
                         <a
                             href={`/projects/${props.project.slug}${
@@ -37,7 +37,7 @@ const ProjectCard = (props: { project: Project; tags: string[] }) => {
                             {props.project.title}
                         </a>
                     </h2>
-                    <div className="flex gap-2">
+                    <div className="flex lg:justify-end gap-2">
                         {props.project.source && (
                             <a
                                 className="btn btn-ghost btn-sm"
@@ -57,9 +57,9 @@ const ProjectCard = (props: { project: Project; tags: string[] }) => {
                     </div>
                 </div>
                 <p>{props.project.description}</p>
-                <div className="flex gap-2">
+                <div className="flex flex-wrap gap-2">
                     {props.project.tags.map((tag) => (
-                        <span key={tag} className="badge badge-primary">
+                        <span key={tag} className="badge badge-primary w-max">
                             {tag}
                         </span>
                     ))}

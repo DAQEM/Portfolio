@@ -33,7 +33,7 @@ export default function Page({
     }
 
     return (
-        <div className="max-w-6xl mx-auto pt-16">
+        <div className="max-w-6xl mx-auto lg:pt-16 p-4">
             <h1 className="uppercase text-4xl font-bold pb-2">Projects</h1>
             <div className="grid lg:grid-cols-[256px,1fr] gap-8">
                 <div id="filters" className="bg-base-100 h-min rounded-xl p-4">
