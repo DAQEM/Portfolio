@@ -12,11 +12,11 @@ const ProjectCard = (props: { project: Project; tags: string[] }) => {
     return (
         <div className="grid grid-cols-[96px,1fr] p-4 bg-base-100 rounded-xl gap-8 border-opacity-35">
             <div className="flex justify-center items-center w-24 h-24 rounded-2xl overflow-hidden">
-                <a
+                {/* <a
                     href={`/projects/${props.project.slug}${
                         tagsSearchParam ? "?" + tagsSearchParam : ""
                     }`}
-                >
+                > */}
                     <Image
                         className=""
                         src={props.project.logo}
@@ -24,18 +24,19 @@ const ProjectCard = (props: { project: Project; tags: string[] }) => {
                         width={96}
                         height={96}
                     />
-                </a>
+                {/* </a> */}
             </div>
             <div className="grid gap-2">
                 <div className="grid lg:grid-cols-2 justify-between">
-                    <h2 className="text-xl font-semibold link link-hover">
-                        <a
+                    <h2 className="text-xl font-semibold">
+                        {/* <a
+                            className="link link-hover"
                             href={`/projects/${props.project.slug}${
                                 tagsSearchParam ? "?" + tagsSearchParam : ""
                             }`}
-                        >
+                        > */}
                             {props.project.title}
-                        </a>
+                        {/* </a> */}
                     </h2>
                     <div className="flex lg:justify-end gap-2">
                         {props.project.source && (
