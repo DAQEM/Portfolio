@@ -13,13 +13,13 @@ export const metadata: Metadata = {
     openGraph: {
         type: "website",
         locale: "en_US",
-        url: "https://kevinvdheijden.nl",
+        url: "https://kevinvanderheijden.nl",
         title: "Kevin's Portfolio",
         description:
             "My name is Kevin van der Heijden and I'm a fullstack developer with experience in building efficient and user-friendly web applications using a variety of technologies such a ASP.NET, Next.JS, SvelteKit & Vue.JS. I also love to create Minecraft mods for other people to enjoy using Java.",
         images: [
             {
-                url: "https://kevinvdheijden.nl/images/og-image.png",
+                url: "https://kevinvanderheijden.nl/images/og-image.png",
                 width: 1200,
                 height: 600,
                 alt: "Kevin's Portfolio",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
         creator: "@DaqEmYT",
         images: [
             {
-                url: "https://kevinvdheijden.nl/images/og-image.png",
+                url: "https://kevinvanderheijden.nl/images/og-image.png",
                 width: 1200,
                 height: 600,
                 alt: "Kevin's Portfolio",
