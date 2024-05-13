@@ -134,7 +134,7 @@ const NavbarMyWork = () => {
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="/projects?tags=websites">
+                                                <a href="/projects?tags=brandingsites">
                                                     <Icon
                                                         icon="gg:website"
                                                         className="w-4 h-4"
@@ -143,7 +143,7 @@ const NavbarMyWork = () => {
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="/projects?tags=apis">
+                                                <a href="/projects?tags=microservices">
                                                     <Icon
                                                         icon="carbon:microservices-1"
                                                         className="w-4 h-4"

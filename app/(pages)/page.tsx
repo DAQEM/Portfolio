@@ -373,8 +373,18 @@ export default function Home() {
                         </h3>
                         <div className="divider"></div>
                         <div className="flex justify-center items-center gap-8">
-                            <GitHubIcon className="h-7 fill-primary" />
-                            <LinkedInIcon className="h-9 fill-primary" />
+                            <a
+                                href="https://github.com/DAQEM"
+                                className="lg:btn lg:btn-ghost"
+                            >
+                                <GitHubIcon className="h-7 fill-primary" />
+                            </a>
+                            <a
+                                href="https://linkedin.com/in/kevinvdheijden"
+                                className="lg:btn lg:btn-ghost"
+                            >
+                                <LinkedInIcon className="h-9 fill-primary" />
+                            </a>
                         </div>
                     </div>
                     <div className="hidden col-span-2 input w-full h-full p-4 input-bordered ggrid grid-cols-2 grid-rows-[max-content, 1fr] gap-6">

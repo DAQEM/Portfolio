@@ -31,8 +31,18 @@ const Footer = () => {
             <nav>
                 <h6 className="footer-title">Social</h6>
                 <div className="flex gap-4 items-center">
-                    <GitHubIcon className="h-5 fill-primary" />
-                    <LinkedInIcon className="h-7 fill-primary" />
+                    <a
+                        href="https://github.com/DAQEM"
+                        className="lg:btn lg:btn-ghost"
+                    >
+                        <GitHubIcon className="h-5 fill-primary" />
+                    </a>
+                    <a
+                        href="https://linkedin.com/in/kevinvdheijden"
+                        className="lg:btn lg:btn-ghost"
+                    >
+                        <LinkedInIcon className="h-7 fill-primary" />
+                    </a>
                 </div>
             </nav>
         </footer>
