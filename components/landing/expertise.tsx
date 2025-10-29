@@ -1,15 +1,54 @@
+"use client";
+import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 
 const Expertise = () => {
+    const timelineItemVariants: Variants = {
+        hidden: { opacity: 0, x: -50 },
+        visible: {
+            opacity: 1,
+            x: 0,
+            transition: {
+                duration: 0.5,
+            },
+        },
+    };
+
+    const timelineConnectorVariants: Variants = {
+        hidden: { height: 0 },
+        visible: {
+            height: "100%",
+            transition: {
+                duration: 0.5,
+                ease: "easeInOut",
+                delay: 0.5,
+            },
+        },
+    };
+
     return (
         <div id="expertise" className="bg-blue-50 py-24">
             <div className="flex flex-col max-w-5xl mx-auto px-4">
-                <h2 className="text-7xl font-medium mx-auto">My Expertise</h2>
+                <motion.h2
+                    className="text-5xl md:text-7xl font-medium mx-auto"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ duration: 0.5 }}
+                >
+                    My Expertise
+                </motion.h2>
                 <p className="text-lg mt-12"></p>
                 <div className="mx-auto">
                     <div className="grid md:grid-cols-2 md:gap-8 mt-4">
                         <div className="grid h-min">
-                            <div className="grid grid-cols-[4rem_1fr] gap-4">
+                            <motion.div
+                                className="grid grid-cols-[4rem_1fr] gap-4"
+                                variants={timelineItemVariants}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true, amount: 0.5 }}
+                            >
                                 <div className="grid grid-rows-[4rem_1fr] w-full">
                                     <div className="w-16 h-16 border-2 border-foreground rounded-full bg-base-300">
                                         <div className="flex h-full w-full justify-center items-center">
@@ -21,9 +60,15 @@ const Expertise = () => {
                                             />
                                         </div>
                                     </div>
-                                    <div className="w-16 flex flex-col items-center">
-                                        <div className="w-0.5 h-[calc(100%+4rem)] bg-foreground" />
-                                    </div>
+                                    <motion.div
+                                        variants={timelineConnectorVariants}
+                                        initial="hidden"
+                                        whileInView="visible"
+                                        viewport={{ once: true, amount: 0.5 }}
+                                        className="w-16 flex flex-col items-center"
+                                    >
+                                        <div className="w-0.5 h-full bg-foreground" />
+                                    </motion.div>
                                 </div>
                                 <div className="mb-8">
                                     <h4 className="text-xl font-semibold ">
@@ -39,8 +84,14 @@ const Expertise = () => {
                                         and web applications.
                                     </p>
                                 </div>
-                            </div>
-                            <div className="grid grid-cols-[4rem_1fr] gap-4">
+                            </motion.div>
+                            <motion.div
+                                className="grid grid-cols-[4rem_1fr] gap-4"
+                                variants={timelineItemVariants}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true, amount: 0.5 }}
+                            >
                                 <div className="grid grid-rows-[4rem_1fr] w-full">
                                     <div className="w-16 h-16 border-2 border-foreground rounded-full bg-base-300">
                                         <div className="flex h-full w-full justify-center items-center">
@@ -52,9 +103,15 @@ const Expertise = () => {
                                             />
                                         </div>
                                     </div>
-                                    <div className="w-16 flex flex-col items-center">
+                                    <motion.div
+                                        variants={timelineConnectorVariants}
+                                        initial="hidden"
+                                        whileInView="visible"
+                                        viewport={{ once: true, amount: 0.5 }}
+                                        className="w-16 flex flex-col items-center"
+                                    >
                                         <div className="w-0.5 h-full bg-foreground" />
-                                    </div>
+                                    </motion.div>
                                 </div>
                                 <div className="mb-8">
                                     <h4 className="text-xl font-semibold ">
@@ -69,8 +126,14 @@ const Expertise = () => {
                                         and Entity Framework.
                                     </p>
                                 </div>
-                            </div>
-                            <div className="grid grid-cols-[4rem_1fr] gap-4">
+                            </motion.div>
+                            <motion.div
+                                className="grid grid-cols-[4rem_1fr] gap-4"
+                                variants={timelineItemVariants}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true, amount: 0.5 }}
+                            >
                                 <div className="grid grid-rows-[4rem_1fr] w-full">
                                     <div className="w-16 h-16 border-2 border-foreground rounded-full bg-base-300">
                                         <div className="flex h-full w-full justify-center items-center">
@@ -82,9 +145,15 @@ const Expertise = () => {
                                             />
                                         </div>
                                     </div>
-                                    <div className="w-16 flex flex-col items-center">
+                                    <motion.div
+                                        variants={timelineConnectorVariants}
+                                        initial="hidden"
+                                        whileInView="visible"
+                                        viewport={{ once: true, amount: 0.5 }}
+                                        className="w-16 flex flex-col items-center"
+                                    >
                                         <div className="w-0.5 h-full bg-foreground" />
-                                    </div>
+                                    </motion.div>
                                 </div>
                                 <div className="mb-8">
                                     <h4 className="text-xl font-semibold ">
@@ -99,8 +168,14 @@ const Expertise = () => {
                                         with Entity Framework as the ORM.
                                     </p>
                                 </div>
-                            </div>
-                            <div className="grid grid-cols-[4rem_1fr] gap-4">
+                            </motion.div>
+                            <motion.div
+                                className="grid grid-cols-[4rem_1fr] gap-4"
+                                variants={timelineItemVariants}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true, amount: 0.5 }}
+                            >
                                 <div className="grid grid-rows-[4rem_1fr] w-full">
                                     <div className="w-16 h-16 border-2 border-foreground rounded-full bg-base-300">
                                         <div className="flex h-full w-full justify-center items-center">
@@ -112,9 +187,15 @@ const Expertise = () => {
                                             />
                                         </div>
                                     </div>
-                                    <div className="md:hidden w-16 flex flex-col items-center">
+                                    <motion.div
+                                        variants={timelineConnectorVariants}
+                                        initial="hidden"
+                                        whileInView="visible"
+                                        viewport={{ once: true, amount: 0.5 }}
+                                        className="md:hidden w-16 flex flex-col items-center"
+                                    >
                                         <div className="w-0.5 h-full bg-foreground" />
-                                    </div>
+                                    </motion.div>
                                 </div>
                                 <div className="mb-8">
                                     <h4 className="text-xl font-semibold ">
@@ -133,10 +214,16 @@ const Expertise = () => {
                                         the application using PHP.
                                     </p>
                                 </div>
-                            </div>
+                            </motion.div>
                         </div>
                         <div className="grid h-min">
-                            <div className="grid grid-cols-[4rem_1fr] gap-4">
+                            <motion.div
+                                className="grid grid-cols-[4rem_1fr] gap-4"
+                                variants={timelineItemVariants}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true, amount: 0.5 }}
+                            >
                                 <div className="grid grid-rows-[4rem_1fr] w-full">
                                     <div className="w-16 h-16 border-2 border-foreground rounded-full bg-base-300">
                                         <div className="flex h-full w-full justify-center items-center">
@@ -148,9 +235,15 @@ const Expertise = () => {
                                             />
                                         </div>
                                     </div>
-                                    <div className="w-16 flex flex-col items-center">
+                                    <motion.div
+                                        variants={timelineConnectorVariants}
+                                        initial="hidden"
+                                        whileInView="visible"
+                                        viewport={{ once: true, amount: 0.5 }}
+                                        className="w-16 flex flex-col items-center"
+                                    >
                                         <div className="w-0.5 h-full bg-foreground" />
-                                    </div>
+                                    </motion.div>
                                 </div>
                                 <div className="mb-8">
                                     <h4 className="text-xl font-semibold ">
@@ -162,8 +255,14 @@ const Expertise = () => {
                                         Next.JS and SvelteKit.
                                     </p>
                                 </div>
-                            </div>
-                            <div className="grid grid-cols-[4rem_1fr] gap-4">
+                            </motion.div>
+                            <motion.div
+                                className="grid grid-cols-[4rem_1fr] gap-4"
+                                variants={timelineItemVariants}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true, amount: 0.5 }}
+                            >
                                 <div className="grid grid-rows-[4rem_1fr] w-full">
                                     <div className="w-16 h-16 border-2 border-foreground rounded-full bg-base-300">
                                         <div className="flex h-full w-full justify-center items-center">
@@ -175,9 +274,15 @@ const Expertise = () => {
                                             />
                                         </div>
                                     </div>
-                                    <div className="w-16 flex flex-col items-center">
+                                    <motion.div
+                                        variants={timelineConnectorVariants}
+                                        initial="hidden"
+                                        whileInView="visible"
+                                        viewport={{ once: true, amount: 0.5 }}
+                                        className="w-16 flex flex-col items-center"
+                                    >
                                         <div className="w-0.5 h-full bg-foreground" />
-                                    </div>
+                                    </motion.div>
                                 </div>
                                 <div className="mb-8">
                                     <h4 className="text-xl font-semibold ">
@@ -193,8 +298,14 @@ const Expertise = () => {
                                         to work with JavaScript.
                                     </p>
                                 </div>
-                            </div>
-                            <div className="grid grid-cols-[4rem_1fr] gap-4">
+                            </motion.div>
+                            <motion.div
+                                className="grid grid-cols-[4rem_1fr] gap-4"
+                                variants={timelineItemVariants}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true, amount: 0.5 }}
+                            >
                                 <div className="grid grid-rows-[4rem_1fr] w-full">
                                     <div className="w-16 h-16 border-2 border-foreground rounded-full bg-base-300">
                                         <div className="flex h-full w-full justify-center items-center">
@@ -206,9 +317,15 @@ const Expertise = () => {
                                             />
                                         </div>
                                     </div>
-                                    <div className="w-16 flex flex-col items-center">
+                                    <motion.div
+                                        variants={timelineConnectorVariants}
+                                        initial="hidden"
+                                        whileInView="visible"
+                                        viewport={{ once: true, amount: 0.5 }}
+                                        className="w-16 flex flex-col items-center"
+                                    >
                                         <div className="w-0.5 h-full bg-foreground" />
-                                    </div>
+                                    </motion.div>
                                 </div>
                                 <div className="mb-8">
                                     <h4 className="text-xl font-semibold ">
@@ -222,8 +339,14 @@ const Expertise = () => {
                                         rendering and the file-based routing.
                                     </p>
                                 </div>
-                            </div>
-                            <div className="grid grid-cols-[4rem_1fr] gap-4">
+                            </motion.div>
+                            <motion.div
+                                className="grid grid-cols-[4rem_1fr] gap-4"
+                                variants={timelineItemVariants}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true, amount: 0.5 }}
+                            >
                                 <div className="w-16 h-16 border-2 border-foreground rounded-full bg-base-300">
                                     <div className="flex h-full w-full justify-center items-center">
                                         <Image
@@ -250,7 +373,7 @@ const Expertise = () => {
                                         projects.
                                     </p>
                                 </div>
-                            </div>
+                            </motion.div>
                         </div>
                     </div>
                 </div>

@@ -1,15 +1,24 @@
+"use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 const About = () => {
     return (
-        <div id="about" className="py-24">
+        <motion.div
+            id="about"
+            className="py-24"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.5, delay: 1 }}
+        >
             <div className="flex flex-col gap-8 max-w-5xl mx-auto px-4">
-                <h2 className="text-7xl font-medium sm:col-span-2 mx-auto">
+                <h2 className="text-5xl md:text-7xl font-medium sm:col-span-2 mx-auto">
                     About Me
                 </h2>
                 <div className="grid md:grid-cols-[1fr_256px] gap-8">
                     <p className="text-lg">
-                        I'm a software developer based near Eindhoven,
+                        I&apos;m a software developer based near Eindhoven,
                         passionate about web development, fitness, running,
                         hiking, gaming, and programming. I studied ICT
                         Management at ROC De Leijgraaf, followed by HBO-ICT at
@@ -29,7 +38,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

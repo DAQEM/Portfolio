@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Footer = () => {
     return (
         <div className="py-24 bg-blue-50">
@@ -9,12 +11,12 @@ const Footer = () => {
                     <h4 className="font-bold">Socials</h4>
                     <ul>
                         <li>
-                            <a href="https://linkedin.com/in/kevinvdheijden">
+                            <Link href="https://linkedin.com/in/kevinvdheijden">
                                 LinkedIn
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="https://github.com/DAQEM">GitHub</a>
+                            <Link href="https://github.com/DAQEM">GitHub</Link>
                         </li>
                     </ul>
                 </div>
@@ -22,19 +24,19 @@ const Footer = () => {
                     <h4 className="font-bold">Links</h4>
                     <ul>
                         <li>
-                            <a href="/#about">About</a>
+                            <Link href="/#about">About</Link>
                         </li>
                         <li>
-                            <a href="/#my-work">My Work</a>
+                            <Link href="/#my-work">My Work</Link>
                         </li>
                         <li>
-                            <a href="/#expertise">Expertise</a>
+                            <Link href="/#expertise">Expertise</Link>
                         </li>
                         <li>
-                            <a href="/#education">Education</a>
+                            <Link href="/#education">Education</Link>
                         </li>
                         <li>
-                            <a href="/#contact">Contact</a>
+                            <Link href="/#contact">Contact</Link>
                         </li>
                     </ul>
                 </div>
