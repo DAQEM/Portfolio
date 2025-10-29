@@ -10,7 +10,7 @@ const About = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.5, delay: 1 }}
+            transition={{ duration: 0.5 }}
         >
             <div className="flex flex-col gap-8 max-w-5xl mx-auto px-4">
                 <h2 className="text-5xl md:text-7xl font-medium sm:col-span-2 mx-auto">
