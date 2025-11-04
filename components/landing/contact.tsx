@@ -14,7 +14,11 @@ const Contact = () => {
                 <p className="mx-auto mt-4 md:mt-0">
                     Feel free to contact me with any inquiries or questions!
                 </p>
-                <div className="grid md:grid-cols-2 gap-x-8 max-w-3xl w-full mx-auto">
+                <form
+                    action="https://formspree.io/f/movpopga"
+                    method="POST"
+                    className="grid md:grid-cols-2 gap-x-8 max-w-3xl w-full mx-auto"
+                >
                     <div className="mt-4">
                         <label className="block mb-2" htmlFor="name">
                             Name
@@ -22,7 +26,9 @@ const Contact = () => {
                         <input
                             type="text"
                             id="name"
+                            name="name"
                             className="border border-gray-300 p-2 rounded-md w-full focus:outline-foreground"
+                            required
                         />
                     </div>
                     <div className="mt-4">
@@ -32,7 +38,9 @@ const Contact = () => {
                         <input
                             type="email"
                             id="email"
+                            name="email"
                             className="border border-gray-300 p-2 rounded-md w-full focus:outline-foreground"
+                            required
                         />
                     </div>
                     <div className="mt-4 md:col-span-2">
@@ -41,7 +49,9 @@ const Contact = () => {
                         </label>
                         <textarea
                             id="message"
+                            name="message"
                             className="border border-gray-300 p-2 rounded-md w-full focus:outline-foreground h-32"
+                            required
                         />
                     </div>
                     <div className="mt-4 md:col-span-2 flex justify-end">
@@ -52,7 +62,7 @@ const Contact = () => {
                             Send Message
                         </button>
                     </div>
-                </div>
+                </form>
                 <div className="flex gap-8 mx-auto mt-4">
                     <a href="https://linkedin.com/in/kevinvdheijden">
                         <svg
