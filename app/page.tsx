@@ -4,7 +4,26 @@ import Contact from "@/components/landing/contact";
 import Education from "@/components/landing/education";
 import Expertise from "@/components/landing/expertise";
 import Work from "@/components/landing/work";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, Transition } from "framer-motion";
+import { useMemo } from "react";
+
+const gradients = [
+    { x: "-50%", y: "-80%", color: "from-cyan-400/50" },
+    { x: "-50%", y: "-65%", color: "from-blue-500/50" },
+    { x: "-50%", y: "-40%", color: "from-cyan-600/50" },
+    { x: "-25%", y: "-80%", color: "from-cyan-400/50" },
+    { x: "-25%", y: "-65%", color: "from-blue-500/50" },
+    { x: "-25%", y: "-40%", color: "from-cyan-600/50" },
+    { x: "0%", y: "-80%", color: "from-cyan-400/50" },
+    { x: "0%", y: "-65%", color: "from-blue-500/50" },
+    { x: "0%", y: "-40%", color: "from-blue-600/50" },
+    { x: "25%", y: "-80%", color: "from-cyan-400/50" },
+    { x: "25%", y: "-65%", color: "from-blue-500/50" },
+    { x: "25%", y: "-40%", color: "from-cyan-600/50" },
+    { x: "50%", y: "-80%", color: "from-cyan-400/50" },
+    { x: "50%", y: "-65%", color: "from-blue-500/50" },
+    { x: "50%", y: "-40%", color: "from-blue-600/50" },
+];
 
 export default function Home() {
     const { scrollYProgress } = useScroll();
@@ -31,27 +50,53 @@ export default function Home() {
         },
     };
 
+    const animatedGradients = useMemo(() => {
+        return gradients.map(({ x, y, color }) => {
+            const xVal = parseInt(x, 10);
+            const yVal = parseInt(y, 10);
+            const transition: Transition = {
+                duration: 15 + Math.random() * 10,
+                ease: "easeInOut",
+                repeat: Infinity,
+                repeatType: "mirror",
+            };
+            return {
+                color,
+                initial: { x, y },
+                animate: {
+                    x: [
+                        `${xVal}%`,
+                        `${xVal + Math.random() * 10 - 5}%`,
+                        `${xVal - Math.random() * 10 - 5}%`,
+                        `${xVal}%`,
+                    ],
+                    y: [
+                        `${yVal}%`,
+                        `${yVal + Math.random() * 10 - 5}%`,
+                        `${yVal - Math.random() * 10 - 5}%`,
+                        `${yVal}%`,
+                    ],
+                },
+                transition,
+            };
+        });
+    }, []);
+
     return (
         <>
             <motion.div
                 style={{ y }}
                 className="absolute overflow-clip top-0 left-0 w-full h-screen -z-10"
             >
-                <div className="absolute -translate-x-[50%] -translate-y-[80%] size-[200vh] md:w-full aspect-square bg-radial from-cyan-400/50 to-50% to-transparent"></div>
-                <div className="absolute -translate-x-[50%] -translate-y-[65%] size-[200vh] md:w-full aspect-square bg-radial from-blue-500/50 to-50% to-transparent"></div>
-                <div className="absolute -translate-x-[50%] -translate-y-[40%] size-[200vh] md:w-full aspect-square bg-radial from-cyan-600/50 to-50% to-transparent"></div>
-                <div className="absolute -translate-x-[25%] -translate-y-[80%] size-[200vh] md:w-full aspect-square bg-radial from-cyan-400/50 to-50% to-transparent"></div>
-                <div className="absolute -translate-x-[25%] -translate-y-[65%] size-[200vh] md:w-full aspect-square bg-radial from-blue-500/50 to-50% to-transparent"></div>
-                <div className="absolute -translate-x-[25%] -translate-y-[40%] size-[200vh] md:w-full aspect-square bg-radial from-cyan-600/50 to-50% to-transparent"></div>
-                <div className="absolute -translate-x-[0%] -translate-y-[80%] size-[200vh] md:w-full aspect-square bg-radial from-cyan-400/50 to-50% to-transparent"></div>
-                <div className="absolute -translate-x-[0%] -translate-y-[65%] size-[200vh] md:w-full aspect-square bg-radial from-blue-500/50 to-50% to-transparent"></div>
-                <div className="absolute -translate-x-[0%] -translate-y-[40%] size-[200vh] md:w-full aspect-square bg-radial from-blue-600/50 to-50% to-transparent"></div>
-                <div className="absolute translate-x-[25%] -translate-y-[80%] size-[200vh] md:w-full aspect-square bg-radial from-cyan-400/50 to-50% to-transparent"></div>
-                <div className="absolute translate-x-[25%] -translate-y-[65%] size-[200vh] md:w-full aspect-square bg-radial from-blue-500/50 to-50% to-transparent"></div>
-                <div className="absolute translate-x-[25%] -translate-y-[40%] size-[200vh] md:w-full aspect-square bg-radial from-cyan-600/50 to-50% to-transparent"></div>
-                <div className="absolute translate-x-[50%] -translate-y-[80%] size-[200vh] md:w-full aspect-square bg-radial from-cyan-400/50 to-50% to-transparent"></div>
-                <div className="absolute translate-x-[50%] -translate-y-[65%] size-[200vh] md:w-full aspect-square bg-radial from-blue-500/50 to-50% to-transparent"></div>
-                <div className="absolute translate-x-[50%] -translate-y-[40%] size-[200vh] md:w-full aspect-square bg-radial from-blue-600/50 to-50% to-transparent"></div>
+                {animatedGradients.map((grad, i) => (
+                    <motion.div
+                        key={i}
+                        className={`absolute size-[200vh] md:w-full aspect-square bg-radial to-50% to-transparent ${grad.color}`}
+                        initial={grad.initial}
+                        animate={grad.animate}
+                        transition={grad.transition}
+                    />
+                ))}
             </motion.div>
             <div className="my-16 flex flex-col">
                 <motion.div

@@ -93,7 +93,7 @@ const projects: Project[] = [
 // Reusable Project Card component
 const ProjectCard = ({ project }: { project: Project }) => {
     return (
-        <div className="group relative overflow-hidden rounded-3xl p-8 h-96 min-w-lg flex flex-col justify-between">
+        <div className="group relative overflow-hidden rounded-3xl p-8 h-96 md:min-w-lg flex flex-col justify-between">
             <div className="absolute inset-0 -z-20 bg-cover bg-center opacity-50 blur-sm scale-110 bg-blue-200" />
 
             {/* Blurred Background Image */}
@@ -113,15 +113,17 @@ const ProjectCard = ({ project }: { project: Project }) => {
                     alt={`${project.title} Logo`}
                     width={400}
                     height={200}
-                    className="h-16 w-auto"
+                    className="h-12 md:h-16 w-auto"
                 />
             </div>
 
             <div>
-                <h3 className="text-4xl font-semibold mb-2">{project.title}</h3>
+                <h3 className="text-3xl md:text-4xl font-semibold mb-2">
+                    {project.title}
+                </h3>
                 <p className="mb-4">{project.description}</p>
 
-                <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-300 ease-in-out mb-4">
+                <div className="grid grid-rows-1 md:grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-300 ease-in-out mb-4">
                     <div className="min-h-0 overflow-hidden">
                         <div className="flex flex-wrap gap-2">
                             {project.tags.map((tag, index) => (
@@ -136,7 +138,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
                     </div>
                 </div>
 
-                <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-300 ease-in-out">
+                <div className="grid grid-rows-1 md:grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-300 ease-in-out">
                     <div className="min-h-0 overflow-hidden flex gap-4">
                         {project.liveUrl && (
                             <a
