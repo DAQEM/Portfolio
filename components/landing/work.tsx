@@ -205,44 +205,60 @@ const Work = () => {
     const x = useTransform(scrollYProgress, [0, 1], [0, carouselEnd]);
 
     return (
-        <div id="my-work" className="py-24">
-            <div className="flex flex-col max-w-5xl mx-auto px-4 mb-12">
-                <h2 className="text-5xl md:text-7xl font-medium mx-auto">
-                    My Work
-                </h2>
-                <p className="text-lg mt-12 text-center">
-                    Here are some of the projects I&apos;ve worked on recently.
-                    Feel free to explore and check out the code on my GitHub
-                    profile!
-                </p>
+        <div id="my-work" className="">
+            {/* --- Desktop Horizontal Scroll Section --- */}
+            <div className="hidden md:block">
+                <section
+                    ref={targetRef}
+                    className="relative h-[calc(384px*6+(32px*5))] hidden md:block"
+                >
+                    <div className="sticky top-0 flex flex-col justify-start overflow-hidden py-32">
+                        <div className="mb-16 flex flex-col gap-2">
+                            <h2 className="text-5xl md:text-7xl font-medium mx-auto">
+                                My Work
+                            </h2>
+                            <p className="mt-8 text-center max-w-3xl mx-auto">
+                                Here are some of the projects I&apos;ve worked
+                                on recently. Feel free to explore and check out
+                                the code on my GitHub profile!
+                            </p>
+                        </div>
+                        {/* Centered container matching the header width */}
+                        <div className="max-w-5xl mx-auto w-full px-4">
+                            <motion.div
+                                ref={carouselRef}
+                                style={{ x }}
+                                className="flex gap-8"
+                            >
+                                {projects.map((project, index) => (
+                                    <ProjectCard
+                                        key={index}
+                                        project={project}
+                                    />
+                                ))}
+                            </motion.div>
+                        </div>
+                    </div>
+                </section>
             </div>
 
-            {/* --- Desktop Horizontal Scroll Section --- */}
-            <section
-                ref={targetRef}
-                className="relative h-[300vh] hidden md:block"
-            >
-                <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-                    {/* Centered container matching the header width */}
-                    <div className="max-w-5xl mx-auto w-full px-4">
-                        <motion.div
-                            ref={carouselRef}
-                            style={{ x }}
-                            className="flex gap-8"
-                        >
-                            {projects.map((project, index) => (
-                                <ProjectCard key={index} project={project} />
-                            ))}
-                        </motion.div>
-                    </div>
-                </div>
-            </section>
-
             {/* --- Mobile Vertical Grid Section --- */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-12 md:hidden px-4">
-                {projects.map((project, index) => (
-                    <ProjectCard key={index} project={project} />
-                ))}
+            <div className="md:hidden">
+                <div className="flex flex-col max-w-5xl mx-auto px-4">
+                    <h2 className="text-5xl md:text-7xl font-medium mx-auto">
+                        My Work
+                    </h2>
+                    <p className="mt-8 text-center">
+                        Here are some of the projects I&apos;ve worked on
+                        recently. Feel free to explore and check out the code on
+                        my GitHub profile!
+                    </p>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-16 px-4">
+                    {projects.map((project, index) => (
+                        <ProjectCard key={index} project={project} />
+                    ))}
+                </div>
             </div>
         </div>
     );

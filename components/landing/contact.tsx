@@ -1,25 +1,29 @@
 const Contact = () => {
     return (
-        <div id="contact" className="py-24">
-            <div className="flex flex-col max-w-5xl mx-auto px-4">
-                <h2 className="text-5xl md:text-7xl font-medium mx-auto">
-                    Contact Me
-                </h2>
+        <div id="contact" className="py-32">
+            <div className="flex flex-col max-w-5xl mx-auto px-4 gap-8">
+                <div className="flex flex-col text-center gap-2">
+                    <h2 className="text-5xl md:text-7xl font-medium">
+                        Contact Me
+                    </h2>
+                    <p>
+                        Feel free to contact me with any inquiries or questions!
+                    </p>
+                </div>
+
                 <a
                     className="text-2xl md:text-4xl font-heading mx-auto opacity-50 hover:opacity-100 transition"
                     href="mailto:kevin@kevinvanderheijden.nl"
                 >
                     kevin@kevinvanderheijden.nl
                 </a>
-                <p className="mx-auto mt-4 md:mt-0">
-                    Feel free to contact me with any inquiries or questions!
-                </p>
+
                 <form
                     action="https://formspree.io/f/movpopga"
                     method="POST"
-                    className="grid md:grid-cols-2 gap-x-8 max-w-3xl w-full mx-auto"
+                    className="grid md:grid-cols-2 gap-6 max-w-3xl w-full mx-auto"
                 >
-                    <div className="mt-4">
+                    <div>
                         <label className="block mb-2" htmlFor="name">
                             Name
                         </label>
@@ -31,7 +35,7 @@ const Contact = () => {
                             required
                         />
                     </div>
-                    <div className="mt-4">
+                    <div>
                         <label className="block mb-2" htmlFor="email">
                             Email
                         </label>
@@ -43,7 +47,7 @@ const Contact = () => {
                             required
                         />
                     </div>
-                    <div className="mt-4 md:col-span-2">
+                    <div className="md:col-span-2">
                         <label className="block mb-2" htmlFor="message">
                             Message
                         </label>
@@ -54,7 +58,7 @@ const Contact = () => {
                             required
                         />
                     </div>
-                    <div className="mt-4 md:col-span-2 flex justify-end">
+                    <div className="md:col-span-2 flex justify-end">
                         <button
                             type="submit"
                             className="px-6 py-2 cursor-pointer hover:bg-blue-50 transition rounded-xl"
@@ -63,7 +67,7 @@ const Contact = () => {
                         </button>
                     </div>
                 </form>
-                <div className="flex gap-8 mx-auto mt-4">
+                <div className="flex gap-8 mx-auto">
                     <a href="https://linkedin.com/in/kevinvdheijden">
                         <svg
                             height="32px"

@@ -6,7 +6,7 @@ const About = () => {
     return (
         <motion.div
             id="about"
-            className="py-24"
+            className="py-32"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
@@ -17,7 +17,7 @@ const About = () => {
                     About Me
                 </h2>
                 <div className="grid md:grid-cols-[1fr_256px] gap-8">
-                    <p className="text-lg">
+                    <p className="text-base">
                         I&apos;m a software developer based near Eindhoven,
                         passionate about web development, fitness, running,
                         hiking, gaming, and programming. I studied ICT

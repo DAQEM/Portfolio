@@ -27,7 +27,7 @@ const Education = () => {
     return (
         <motion.div
             id="education"
-            className="bg-blue-50 py-24"
+            className="bg-blue-50 py-32"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
@@ -37,7 +37,7 @@ const Education = () => {
                 <h2 className="text-5xl md:text-7xl font-medium mx-auto">
                     My Education
                 </h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-12">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-16">
                     <motion.div
                         className="bg-[#FEBCFE] text-[#663366] rounded-3xl p-8"
                         variants={itemVariants}

@@ -4,7 +4,7 @@ import Contact from "@/components/landing/contact";
 import Education from "@/components/landing/education";
 import Expertise from "@/components/landing/expertise";
 import Work from "@/components/landing/work";
-import { motion, useScroll, useTransform, Transition } from "framer-motion";
+import { motion, Transition, useScroll, useTransform } from "framer-motion";
 import { useMemo } from "react";
 
 const gradients = [
@@ -50,6 +50,7 @@ export default function Home() {
         },
     };
 
+    // eslint-disable react-hooks/exhaustive-deps
     const animatedGradients = useMemo(() => {
         return gradients.map(({ x, y, color }) => {
             const xVal = parseInt(x, 10);
@@ -86,6 +87,7 @@ export default function Home() {
         <>
             <motion.div
                 style={{ y }}
+                id="top"
                 className="absolute overflow-clip top-0 left-0 w-full h-screen -z-10"
             >
                 {animatedGradients.map((grad, i) => (
@@ -98,9 +100,9 @@ export default function Home() {
                     />
                 ))}
             </motion.div>
-            <div className="my-16 flex flex-col">
+            <div className="flex flex-col">
                 <motion.div
-                    className="max-w-5xl mx-auto px-4 pb-24"
+                    className="max-w-5xl mx-auto h-screen flex flex-col justify-center px-4"
                     variants={containerVariants}
                     initial="hidden"
                     animate="visible"
@@ -118,13 +120,12 @@ export default function Home() {
                         A Software Engineer.
                     </motion.h2>
                     <motion.p
-                        className="max-w-3xl mt-12 text-lg"
+                        className="max-w-2xl mt-8"
                         variants={itemVariants}
                     >
-                        I&apos;m a fullstack developer, building user-friendly
-                        web applications using ASP.NET, Next.js, SvelteKit, and
-                        Vue.js. I also enjoy creating Java-based Minecraft mods
-                        for others to enjoy.
+                        I&apos;m a Fullstack Developer, building user-friendly
+                        web applications using ASP.NET and Next.js. I also enjoy
+                        creating Java-based Minecraft mods for others to enjoy.
                     </motion.p>
                 </motion.div>
                 <About />
